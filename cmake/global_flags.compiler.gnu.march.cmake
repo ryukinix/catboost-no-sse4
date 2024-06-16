@@ -1,4 +1,3 @@
-
 set(_GNU_MARCH_C_CXX_FLAGS "")
 
 if (CMAKE_SYSTEM_PROCESSOR MATCHES "^(i686|x86_64|AMD64)$")
@@ -15,8 +14,6 @@ if (CMAKE_SYSTEM_PROCESSOR MATCHES "^(i686|x86_64|AMD64)$")
 
   if ((CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|AMD64)$") OR (NOT ANDROID))
     string(APPEND _GNU_MARCH_C_CXX_FLAGS "\
-      -msse4.1 \
-      -msse4.2 \
       -mpopcnt \
     ")
     if (NOT ANDROID)

@@ -25,8 +25,6 @@ if (CMAKE_SYSTEM_PROCESSOR MATCHES "^(i686|x86_64|AMD64)$")
   ")
   if ((CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|AMD64)$") OR (NOT ANDROID))
     string(APPEND _ALL_X86_EXTENSIONS_DEFINES "\
-      ${flagPrefixSymbol}DSSE41_ENABLED=1 \
-      ${flagPrefixSymbol}DSSE42_ENABLED=1 \
       ${flagPrefixSymbol}DPOPCNT_ENABLED=1 \
     ")
     if (NOT ANDROID)
